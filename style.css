@@ -1,0 +1,353 @@
+:root {
+    box-sizing: border-box;
+    color: white;
+}
+*, ::before, ::after{
+    box-sizing: inherit;
+}
+body{
+    background-image: url(https://cdn.pixabay.com/photo/2017/04/05/01/20/wood-2203740_1280.jpg);
+}
+html, body{
+    height: 100%;
+}
+main{
+    min-height: 100%;
+}
+body::-webkit-scrollbar{
+    background-color: #d4d4d4;
+    width: 10px;
+    height: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #ffdf9a;
+    border-radius: 20px;
+    outline: 1px solid #d5a75a;
+}
+#header{
+    background: black;
+    padding: 5px;
+    font-family: 'Cookie', cursive;
+    display: flex;
+    justify-content: space-between;
+}
+#logo img{
+    width: 60px;
+    margin-left: 10px;
+}
+.navbar{
+    flex: 0 0 60%;
+    display: flex;
+    justify-content: flex-start;
+}
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-size: 1.4rem;
+}
+.list b:hover{
+    color: #FFD77F;
+    cursor: pointer;
+}
+.login-panel{
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.2rem;
+}
+.navbar label, #toggler, i{
+    display: none;
+    font-size: 2.0rem;
+}
+@media screen and (max-width: 600px){
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .navbar label, i{
+        display: inline-flex;
+        align-items: flex-start;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    #toggler:checked ~ .menu{
+        max-height: 100%;
+    }
+    
+}
+.login-panel .login-button{
+    font-size: 1.2rem;
+    margin: 20px auto 0px;
+}
+.login-panel .login-button b{
+    color: white;
+    font-size: 1.4rem;
+}
+.login-panel .login-button b:hover{
+    color: #FFD77F;
+    cursor: pointer;
+}
+.login-button input[type=submit]{
+    background-color: transparent;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Cookie', cursive;
+}
+.login-button input[type=submit]:hover{
+    background-color: transparent;
+    color: #FFD77F;
+    border: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Cookie', cursive;
+}
+#login-faild{
+    font-size: 1.5rem;
+    color: red;
+    border: 1px solid black;
+    background-color: black;
+    padding: 5px;
+    width: 30%;
+    margin: 2% 0 -5% 35%;
+    text-align: center;
+    border-radius: 20px;
+    word-wrap: break-word;
+}
+.slider-box{
+    height: 200px;
+    background-color: black;
+    display: flex;
+}
+.slider-half-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    font-family: cursive, Geneva;
+    font-size: 1.4rem;
+}
+.slider-half-item article{
+    margin: 2rem;
+}
+.slider-half-item .button{
+    text-transform: uppercase;
+    padding: 8px;
+    text-decoration: none;
+    margin: 2px;
+    font-size: 0.7rem;
+}
+.pizza-img{
+    background-image: url(https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+h2{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+p#about-us-info{
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 2.5rem;
+}
+.orders-box{
+    width: 50%;
+    float: left;
+    padding: 20px;
+    margin: auto;
+}
+.advantages-box{
+    background-color: transparent;
+    position: relative;
+    text-align: center;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-family: cursive, Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
+}
+.advantages-one-third{
+    width: 33.3%;
+    float: left;
+    padding: 20px;
+    margin: 90px 0px 30px;
+}
+.column-advantage{
+    position: relative;
+    height: 160px;
+    text-align: center;
+    border: 5px solid black;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-family: cursive, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    max-width: 50%;
+    margin-left: 25%;
+    word-wrap: break-word;
+}
+.best-ingredients{
+    background-image: url(https://cdn.pixabay.com/photo/2016/05/24/13/29/olive-oil-1412361__340.jpg);
+}
+.original-recipe{
+    background-image: url(https://cdn.pixabay.com/photo/2016/05/06/12/15/cook-1375788_960_720.jpg);
+}
+.fast-delivery{
+    background-image: url(https://cdn.pixabay.com/photo/2020/02/10/18/31/motor-scooter-4837310_960_720.jpg);
+}
+.page-footer {
+    width: 100%;
+    background-color: black;
+    font-family: Cookie, cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    bottom: 0;
+}
+table.baza{
+    margin: auto;
+    width: 55rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    background-color: #d5a75a;
+    color: black;   
+    word-wrap: break-word;
+}
+table.add-danie{
+    margin: auto;
+    width: 40rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    background-color: #d5a75a;
+    color: black;   
+}
+table.baza thead, table.add-danie thead{
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.7rem;
+    min-height: 10px;
+}
+table.baza tr:hover, table.add-danie tr:hover{
+    background-color: #d3af71;
+    color: black;
+}
+table.baza input[type=text], table.add-danie input[type=text]{
+    width: 6.25rem;
+    background-color: #FFD77F;
+    margin-bottom: 3px;
+}
+table.baza button[type=submit], table button[type=submit]{
+    background-color: transparent;
+    color: black;
+    border: 1;
+    float: left;
+    margin: auto;
+    margin-left: 10%;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+table.baza button[type=submit]:hover, table.add-danie button[type=submit]:hover{
+    background-color: transparent;
+    color: white;
+    border: 1;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+table.loguj{
+    margin: auto;
+    width: 12.5rem;
+    padding: 10px;
+    border: 1px solid black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    background-color: #232323;
+    border-radius: 20px;
+    box-shadow: 0px 8px 24px 0 rgba(0,0,0,0.3);
+}
+table.loguj td{
+    border: 0px solid black;
+}
+table.loguj tr td b#register{
+    cursor: pointer;
+}
+table.loguj input[type=text], input[type=password]{
+    background-color: white;
+    border-radius: 10px;
+    height: 25px;
+    text-align: center;
+    margin: 5px 0px 5px 0px;
+    box-shadow: 0px 8px 24px 0 rgba(0,0,0,0.3);
+}
+table.loguj input[type=submit]{
+    border-radius: 20px;
+    height: 30px;
+    font-size: 1.1rem;
+    background-color: white;
+    box-shadow: 0px 8px 24px 0 rgba(0,0,0,0.3);
+}
+table.loguj input[type=submit]:hover{
+    background-color: #aeaeae;
+    transform: scale(110%);
+    border-radius: 20px;
+    height: 30px;
+    font-size: 1.1rem;
+    box-shadow: 0px 8px 24px 0 rgba(0,0,0,0.3);
+}
+table.order-table{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    background-color: #d5a75a;
+    color: black; 
+}
+table.order-table thead{
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.7rem;
+    min-height: 10px;
+}
+table.order-table tr:hover{
+    background-color: #d3af71;
+    color: black;
+}
+p#copy{
+    color: #aeaeae;
+    font-size: 0.7rem;
+}
+.select-button{
+    background-color: #d5a75a;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+button.select-button{
+    background-color: #d5a75a;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
