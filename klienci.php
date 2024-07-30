@@ -1,3 +1,6 @@
+<?php
+session_start();  // Włączenie sesji i ustawienie, aby przed zalogowaniem nie było w tabeli opcji "Operacje"
+?>
 <!-- górny div -->
 <div class="slider-box">
         <div class="slider-half-item">
@@ -19,8 +22,6 @@
             <thead><td>Lp.</td><td>Imię</td><td>Nazwisko</td><td>Miejscowość</td><td>Ulica</td><td>Numer</td><td>Operacje</td></thead>
 
         <?php
-        // połączenie z baza danych i wypisanie wszystkich danych z tabeli klienci
-            session_start();
             include 'dbconfig.php';
 
             $baza = mysqli_connect($server,$user,$pass,$base) or ('cos nie tak z połączeniem z BD');
