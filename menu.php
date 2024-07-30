@@ -1,3 +1,6 @@
+<?php
+session_start();  // Włączenie sesji i ustawienie, aby przed zalogowaniem nie było w tabeli opcji "Operacje"
+?>
 <!-- górny div  -->
     <div class="slider-box">
         <div class="slider-half-item">
@@ -17,8 +20,7 @@
 
         <table border="1" class="baza"> 
             <thead><td>Lp.</td><td>Nazwa</td><td>Opis</td><td>Wielkośc</td><td>Cena</td>
-            <?php                                                       // Włączenie sesji i ustawienie, aby przed zalogowaniem nie było w tabeli opcji "Operacje"
-            session_start();                                    
+            <?php                                    
             if(isset($_SESSION['user'])) {                             
             echo "<td>Operacje</td>";
             };
