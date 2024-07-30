@@ -1,6 +1,7 @@
 <?php
-session_start();  // rozpoczęcie sesji
- 
+session_start();  // Włączenie sesji i ustawienie, aby przed zalogowaniem nie było w tabeli opcji "Operacje"
+?>
+<?php
 include 'dbconfig.php';
 $baza = mysqli_connect($server,$user,$pass,$base); // połączenie z baza danych
 
