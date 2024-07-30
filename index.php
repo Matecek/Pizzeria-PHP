@@ -1,3 +1,6 @@
+<?php
+session_start();  // Włączenie sesji i ustawienie, aby przed zalogowaniem nie było w tabeli opcji "Operacje"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +45,7 @@
             <li><b id="home">Strona główna</b></li>
             <li><b id="menu-pizza">Menu</b></li>
             <li><b id="about-us">O nas</b></li>
-            <?php session_start();                      // włączenie sesji, aby przed zalogowaniem nie była widoczna podstrona "Klienci"
+            <?php 
             if(isset($_SESSION['user'])) {
               echo "<li><b id='users'>Klienci</b></li>";
             };
