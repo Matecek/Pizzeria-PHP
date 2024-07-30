@@ -1,3 +1,6 @@
+<?php
+session_start();  // Włączenie sesji i ustawienie, aby przed zalogowaniem nie było w tabeli opcji "Operacje"
+?>
 <!-- górny div -->
 <div class="slider-box">
         <div class="slider-half-item">
@@ -21,8 +24,6 @@
                 <select name="f_klient" class="select-button">
                     
                 <?php
-                // pokazanie opcji do wybrania klienta
-                    session_start();
                     include 'dbconfig.php';
                     $lp=1;
                     $baza = mysqli_connect($server,$user,$pass,$base) or ('coś nie tak z połączniem z BD');
