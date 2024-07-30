@@ -13,5 +13,5 @@
   
 <!-- główny div -->
     <div class="advantages-box">
-        <p id="about-us-info">Nazywam sie Mateusz Wojtas <br> Jestem studentem informatyki na drugim roku <br> To jest mój projekt z przedmiotu bazy danych</p>
+        <p id="about-us-info">Nazywam sie Mateusz <br> Jestem studentem informatyki na drugim roku <br> To jest mój projekt z przedmiotu bazy danych</p>
     </div>
